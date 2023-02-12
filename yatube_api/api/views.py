@@ -33,7 +33,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user, post=post)
 
     def get_queryset(self):
-        post_id = self.kwargs.get("id")
+        post_id = self.kwargs.get('id')
         return Comment.objects.filter(post=post_id)
 
 
