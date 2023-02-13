@@ -18,6 +18,7 @@ Yatube мини социальная сеть.
 ```git clone https://github.com/vitalikShcerbakov/api_final_yatube.git```
 
 - Перейти в каталог с проектом:
+
 ```cd api_final_yatube```
 
 - Cозать вертуальное окружение venv:
@@ -109,9 +110,9 @@ http://127.0.0.1:8000/api/v1/posts/
 
 - http://127.0.0.1:8000/api/v1/posts/{id}/
 PATH PARAMETERS
-|id | integer|
+| id | integer |
 | ------ | ------ |
-|required |id публикации|
+| required | id публикации |
 
 ```
 {
