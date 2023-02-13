@@ -4,8 +4,6 @@
 Yatube мини социальная сеть.
 
 ### Технологии
-- Python3.9
-- pip 22.0.4
 - Django==3.2.16
 - djangorestframework==3.12.4
 - djangorestframework-simplejwt==4.7.2
@@ -14,7 +12,9 @@ Yatube мини социальная сеть.
 - requests==2.26.0
 
 ### Настройка проекта (Linux)
+Проверить что у вас устоновленн Python версии 3.9 и pip 22
 - В терминале:
+- Клонировать репозиторий
 
 ```
 git clone https://github.com/vitalikShcerbakov/api_final_yatube.git
@@ -32,13 +32,13 @@ cd api_final_yatube
 python3.9 -m venv venv
 ```
 
-- Активируем виртуальное окружение:
+- Активировать виртуальное окружение:
 
 ```
 source venv/bin/activate
 ```
 
-- Установить зависимостей:
+-Установить зависимости:
 
 ```
 pip install -r requirements.txt
