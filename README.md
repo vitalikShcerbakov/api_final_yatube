@@ -38,7 +38,7 @@ python3.9 -m venv venv
 source venv/bin/activate
 ```
 
--Установить зависимостей:
+- Установить зависимостей:
 
 ```
 pip install -r requirements.txt
