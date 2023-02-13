@@ -42,6 +42,14 @@ sudo apt install git
 ```
 git --version
 ```
+- Установить pip3:
+```
+sudo apt -y install python3-pip
+```
+- Проверка правильности устоновки pip:
+```
+pip3 --version
+```
 - Клонировать репозиторий
 
 ```
