@@ -50,10 +50,26 @@ http://127.0.0.1:8000/api/v1/posts/
 
 ### Создание публикации
 - Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
-- POST
-'''http://127.0.0.1:8000/api/v1/posts/'''  
-
-
+```
+- POST запрос content type application/json
+http://127.0.0.1:8000/api/v1/posts/
+{
+  "text": "string",
+  "image": "string",
+  "group": 0
+}
+```
+- Ответ 
+```
+{
+"id": 0,
+"author": "string",
+"text": "string",
+"pub_date": "2019-08-24T14:15:22Z",
+"image": "string",
+"group": 0
+}
+```
 ### Авторы
 Виталий Щербаков
 <img src="https://komarev.com/ghpvc/?username=vitalikShcerbakov&style=flat-square&color=blue" alt=""/>
