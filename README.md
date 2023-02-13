@@ -1,4 +1,3 @@
-
 # API yatube
 
 ### Описание
@@ -43,23 +42,42 @@ python manage.py runserver
 # Примеры:
 ### Получение публикаций
 - Получить список всех публикаций. При указании параметров limit и offset выдача должна работать с пагинацией.
-GET запрос
+>GET запрос
 ```
 http://127.0.0.1:8000/api/v1/posts/
 ```
-
+>Oтвет
+```
+{
+  "count": 123,
+  "next": "http://api.example.org/accounts/?offset=400&limit=100",
+  "previous": "http://api.example.org/accounts/?offset=200&limit=100",
+  "results": [
+    {
+      "id": 0,
+      "author": "string",
+      "text": "string",
+      "pub_date": "2021-10-14T20:41:29.648Z",
+      "image": "string",
+      "group": 0
+    }
+  ]
+}
+```
 ### Создание публикации
 - Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
+
+> POST запрос content type application/json
+
+ - http://127.0.0.1:8000/api/v1/posts/
 ```
-- POST запрос content type application/json
-http://127.0.0.1:8000/api/v1/posts/
 {
   "text": "string",
   "image": "string",
   "group": 0
 }
 ```
-- Ответ 
+>Ответ (Удачное выполнение запроса - 201)
 ```
 {
 "id": 0,
@@ -68,6 +86,20 @@ http://127.0.0.1:8000/api/v1/posts/
 "pub_date": "2019-08-24T14:15:22Z",
 "image": "string",
 "group": 0
+}
+```
+>Ответ (Отсутствует обязательное поле в теле запроса 400)
+```
+{
+  "text": [
+    "Обязательное поле."
+  ]
+}
+```
+>Ответ (Запрос от имени анонимного пользователя 401)
+```
+{
+  "detail": "Учетные данные не были предоставлены."
 }
 ```
 ### Авторы
