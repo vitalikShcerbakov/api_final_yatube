@@ -16,15 +16,17 @@ Yatube мини социальная сеть.
 
 ### Настройка проекта (Linux)
 - В терминале:
-
 ```git clone https://github.com/vitalikShcerbakov/api_final_yatube.git```
+
 - Перейти в каталог с проектом
 ```cd api_final_yatube```
+
 - Cозать вертуальное окружение venv:
-- 
 ```python3.9 -m venv venv```
+
 - Активируем виртуальное окружение.
 ```source venv/bin/activate```
+
 -Установить зависимостей.
 ```pip install -r requirements.txt```
 
